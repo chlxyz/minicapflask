@@ -10,12 +10,12 @@
           "requirements.txt"
         ],
         "excludeFiles": [
-          "*.h5",
           "node_modules/**",
           "__pycache__/**",
           "*.pyc",
           "*.pyo",
-          "*.pyd"
+          "*.pyd",
+          "venv/**"
         ]
       }
     }
