@@ -7,7 +7,6 @@ from sklearn.preprocessing import StandardScaler
 app = Flask(__name__)
 CORS(app)  # Enable CORS for all routes
 
-# Load the saved TensorFlow.js model
 model = tf.keras.models.load_model('model_qu6.h5')
 
 # Initialize the scaler (assuming you've saved your scaler parameters)
