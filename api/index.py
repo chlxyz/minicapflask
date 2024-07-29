@@ -1,7 +1,7 @@
 from flask import Flask, request, jsonify
 import numpy as np
 import tensorflow as tf
-from flask_cors import CORS  # Import CORS
+from flask_cors import CORS
 from sklearn.preprocessing import StandardScaler
 
 app = Flask(__name__)
