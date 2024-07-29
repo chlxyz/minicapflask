@@ -1,13 +1,13 @@
 from flask import Flask, request, jsonify
 import numpy as np
-import tensorflow as tf
+# import tensorflow as tf
 from flask_cors import CORS
 from sklearn.preprocessing import StandardScaler
 
 app = Flask(__name__)
 CORS(app)  # Enable CORS for all routes
 
-model = tf.keras.models.load_model('model_qu6.h5')
+# model = tf.keras.models.load_model('model_qu6.h5')
 
 # Initialize the scaler (assuming you've saved your scaler parameters)
 scaler = StandardScaler()
