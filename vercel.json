@@ -15,5 +15,5 @@
     "env": {
       "VERCEL_MIDDLEWARE_TOOLBAR": "0"
     }
-  }
+}
   
