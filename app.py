@@ -6,7 +6,6 @@ from sklearn.preprocessing import StandardScaler
 app = Flask(__name__)
 CORS(app)
 
-# Initialize the scaler (assuming you've saved your scaler parameters)
 scaler = StandardScaler()
 
 # Dummy fit for scaler (replace with actual values or load pre-fitted scaler)
