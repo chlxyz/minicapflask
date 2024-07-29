@@ -1,4 +1,4 @@
-Flask
-Flask-Cors
-scikit-learn
+flask
+flask-cors
 numpy
+scikit-learn

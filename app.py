@@ -1,13 +1,10 @@
 from flask import Flask, request, jsonify
 import numpy as np
-# import tensorflow as tf
 from flask_cors import CORS
 from sklearn.preprocessing import StandardScaler
 
 app = Flask(__name__)
-CORS(app)  # Enable CORS for all routes
-
-# model = tf.keras.models.load_model('model_qu6.h5')
+CORS(app)
 
 # Initialize the scaler (assuming you've saved your scaler parameters)
 scaler = StandardScaler()
@@ -23,7 +20,7 @@ def index():
 @app.route('/predict', methods=['POST'])
 def predict():
     data = request.get_json(force=True)
-    print(f"Received data: {data}")  # Add this line to print incoming data
+    print(f"Received data: {data}")
 
     try:
         # Extract and convert inputs

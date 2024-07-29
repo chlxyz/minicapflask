@@ -1,19 +1,29 @@
 {
-    "version": 2,
-    "builds": [
-      {
-        "src": "api/index.py",
-        "use": "@vercel/python"
+  "version": 2,
+  "builds": [
+    {
+      "src": "app.py",
+      "use": "@vercel/python",
+      "config": {
+        "includeFiles": [
+          "app.py",
+          "requirements.txt"
+        ],
+        "excludeFiles": [
+          "*.h5",
+          "node_modules/**",
+          "__pycache__/**",
+          "*.pyc",
+          "*.pyo",
+          "*.pyd"
+        ]
       }
-    ],
-    "routes": [
-      {
-        "src": "/(.*)",
-        "dest": "api/index.py"
-      }
-    ],
-    "env": {
-      "VERCEL_MIDDLEWARE_TOOLBAR": "0"
     }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/app.py"
+    }
+  ]
 }
-  
