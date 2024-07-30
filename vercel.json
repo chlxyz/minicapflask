@@ -2,28 +2,14 @@
   "version": 2,
   "builds": [
     {
-      "src": "app.py",
-      "use": "@vercel/python",
-      "config": {
-        "includeFiles": [
-          "app.py",
-          "requirements.txt"
-        ],
-        "excludeFiles": [
-          "node_modules/**",
-          "__pycache__/**",
-          "*.pyc",
-          "*.pyo",
-          "*.pyd",
-          "venv/**"
-        ]
-      }
+      "src": "api/index.py",
+      "use": "@vercel/python"
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "/app.py"
+      "dest": "api/index.py"
     }
   ]
 }
